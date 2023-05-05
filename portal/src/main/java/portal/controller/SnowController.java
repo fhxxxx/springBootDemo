@@ -10,18 +10,21 @@ package portal.controller;/*
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author gangxiang.guan
- * @create 2023/4/19 15:14
+ * @create 2023/5/5 11:05
  */
+@RequestMapping("snow")
 @Slf4j
-@RequestMapping("test")
 @RestController
-public class TestController {
+public class SnowController {
 
-    @RequestMapping("test1")
-    public void test1(){
-        log.info("helloWorld");
+    @RequestMapping("page")
+    public ModelAndView page(ModelAndView modelAndView){
+        log.info("打开圣诞树页");
+        modelAndView.setViewName("snow/page");
+        return modelAndView;
     }
 }
