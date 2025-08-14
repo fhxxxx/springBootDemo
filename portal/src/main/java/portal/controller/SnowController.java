@@ -27,4 +27,9 @@ public class SnowController {
         modelAndView.setViewName("snow/page");
         return modelAndView;
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
 }
